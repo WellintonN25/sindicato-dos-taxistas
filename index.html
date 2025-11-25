@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>STB-AC - Sindicato dos Taxistas de Brasileia</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo" onclick="navigateTo('home')">
+          <div class="logo-icon">🚖</div>
+          <span class="logo-text">STB-AC</span>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a class="nav-link active" onclick="navigateTo('home')">Início</a>
+          </li>
+          <li>
+            <a class="nav-link" onclick="navigateTo('services')">Serviços</a>
+          </li>
+          <li>
+            <a class="nav-link" onclick="navigateTo('contact')">Contato</a>
+          </li>
+          <li><button class="btn-login">Login</button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-bg">
+          <img
+            src="https://images.unsplash.com/photo-1728536946752-1ef6aabf69ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXhpJTIwc3RyZWV0JTIwY2l0eXxlbnwxfHx8fDE3NjQwMzg2NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Taxi"
+          />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-card">
+            <h1 class="hero-title">Sindicato dos Taxistas de Brasileia</h1>
+            <p class="hero-slogan">
+              Unidos pelo caminho. A força do taxista acreano.
+            </p>
+            <p class="hero-description">
+              Representando e defendendo os direitos dos profissionais do táxi
+              no municipio de Brasileia há mais de 25 anos.
+            </p>
+            <button class="btn-primary" onclick="navigateTo('services')">
+              Acessar Plataforma
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre Nós Section -->
+      <section class="container">
+        <div class="section-header">
+          <h2 class="section-title">Sobre Nós</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 4rem">
+          <div class="glass-card">
+            <div
+              class="card-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(251, 191, 36, 0.2) 0%,
+                  rgba(245, 158, 11, 0.2) 100%
+                );
+                border: 1px solid rgba(251, 191, 36, 0.3);
+              "
+            >
+              🛡️
+            </div>
+            <h3 class="card-title">Nossa Missão</h3>
+            <p class="card-description">
+              Defender os direitos e interesses dos taxistas de Brasileia,
+              promovendo melhores condições de trabalho, capacitação
+              profissional e representação política para fortalecer a categoria.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div
+              class="card-icon"
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgba(96, 165, 250, 0.2) 0%,
+                  rgba(34, 211, 238, 0.2) 100%
+                );
+                border: 1px solid rgba(96, 165, 250, 0.3);
+              "
+            >
+              👥
+            </div>
+            <h3 class="card-title">Nossa História</h3>
+            <p class="card-description">
+              Fundado em 1992, o STB-AC nasceu da união de taxistas
+              comprometidos com a valorização da profissão. Hoje, somos a maior
+              representação sindical de taxistas do Municipio de Brasileia Acre.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="value-card yellow">
+            <div class="value-icon">❤️</div>
+            <h4 class="value-title">Solidariedade</h4>
+            <p class="value-description">
+              Apoio mútuo e união entre todos os associados
+            </p>
+          </div>
+
+          <div class="value-card blue">
+            <div class="value-icon">🛡️</div>
+            <h4 class="value-title">Compromisso</h4>
+            <p class="value-description">
+              Dedicação total à defesa dos direitos da categoria
+            </p>
+          </div>
+
+          <div class="value-card green">
+            <div class="value-icon">📈</div>
+            <h4 class="value-title">Progresso</h4>
+            <p class="value-description">
+              Evolução constante e adaptação às mudanças
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="container">
+        <div class="cta-container">
+          <div class="cta-card">
+            <div class="cta-icon-wrapper">
+              <div class="cta-icon">🚖</div>
+            </div>
+            <h2 class="cta-title">Faça Parte da Nossa União</h2>
+            <p class="cta-description">
+              Junte-se aos mais de 200 taxistas associados e tenha acesso a
+              benefícios exclusivos, assistência jurídica e representação
+              sindical forte.
+            </p>
+            <button class="btn-primary" onclick="navigateTo('contact')">
+              Associe-se Agora
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <p>
+            © 2025 STB-AC - Sindicato dos Taxistas de Brasileia. Todos os
+            direitos reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page">
+      <section class="container">
+        <div class="section-header">
+          <h1 class="section-title">Serviços e Benefícios</h1>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Conheça todos os serviços e benefícios exclusivos para membros do
+            STB-AC
+          </p>
+        </div>
+
+        <div class="grid-3" style="margin-bottom: 4rem">
+          <div class="service-card blue">
+            <div
+              class="card-icon"
+              style="
+                background: rgba(96, 165, 250, 0.2);
+                border: 1px solid rgba(96, 165, 250, 0.3);
+              "
+            >
+              ⚖️
+            </div>
+            <h3 class="card-title">Assistência Jurídica</h3>
+            <p class="card-description">
+              Assessoria legal completa para questões trabalhistas e contratuais
+            </p>
+          </div>
+
+          <div class="service-card purple">
+            <div
+              class="card-icon"
+              style="
+                background: rgba(192, 132, 252, 0.2);
+                border: 1px solid rgba(192, 132, 252, 0.3);
+              "
+            >
+              🎓
+            </div>
+            <h3 class="card-title">Capacitação Profissional</h3>
+            <p class="card-description">
+              Cursos e treinamentos para aprimoramento profissional
+            </p>
+          </div>
+
+          <div class="service-card pink">
+            <div
+              class="card-icon"
+              style="
+                background: rgba(251, 113, 133, 0.2);
+                border: 1px solid rgba(251, 113, 133, 0.3);
+              "
+            >
+              ❤️
+            </div>
+            <h3 class="card-title">Assistência à Saúde</h3>
+            <p class="card-description">
+              Parcerias com clínicas e descontos em serviços médicos
+            </p>
+          </div>
+
+          <div class="service-card green">
+            <div
+              class="card-icon"
+              style="
+                background: rgba(74, 222, 128, 0.2);
+                border: 1px solid rgba(74, 222, 128, 0.3);
+              "
+            >
+              💰
+            </div>
+            <h3 class="card-title">Negociação Coletiva</h3>
+            <p class="card-description">
+              Representação em acordos e convenções coletivas
+            </p>
+          </div>
+
+          <div class="service-card yellow">
+            <div
+              class="card-icon"
+              style="
+                background: rgba(251, 191, 36, 0.2);
+                border: 1px solid rgba(251, 191, 36, 0.3);
+              "
+            >
+              🛡️
+            </div>
+            <h3 class="card-title">Seguro de Vida</h3>
+            <p class="card-description">
+              Plano de seguro coletivo com condições especiais
+            </p>
+          </div>
+
+          <div class="service-card cyan">
+            <div
+              class="card-icon"
+              style="
+                background: rgba(34, 211, 238, 0.2);
+                border: 1px solid rgba(34, 211, 238, 0.3);
+              "
+            >
+              📄
+            </div>
+            <h3 class="card-title">Documentação</h3>
+            <p class="card-description">
+              Auxílio na regularização de documentos e licenças
+            </p>
+          </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="section-header">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <span style="font-size: 2.5rem">📰</span>
+            <h2 class="section-title" style="margin: 0">
+              Notícias e Atualizações
+            </h2>
+          </div>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1670299160449-58cccb9545ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtd29yayUyMHVuaXR5JTIwaGFuZHN8ZW58MXx8fHwxNzY0MDM4NjY3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="News"
+              />
+              <div class="news-overlay"></div>
+              <span class="news-category">Assembleia</span>
+            </div>
+            <div class="news-content">
+              <p class="news-date">📅 20 Nov 2025</p>
+              <h3 class="news-title">
+                Assembleia Geral Extraordinária convocada para 5 de Dezembro
+              </h3>
+              <p class="news-description">
+                Pauta: Discussão sobre reajuste de tarifas e novos benefícios
+                para associados.
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1728536946752-1ef6aabf69ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXhpJTIwc3RyZWV0JTIwY2l0eXxlbnwxfHx8fDE3NjQwMzg2NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="News"
+              />
+              <div class="news-overlay"></div>
+              <span class="news-category">Conquista</span>
+            </div>
+            <div class="news-content">
+              <p class="news-date">📅 15 Nov 2025</p>
+              <h3 class="news-title">
+                Sindicato conquista novo acordo com cooperativa de táxis
+              </h3>
+              <p class="news-description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Blanditiis, eos, quam hic corrupti excepturi placeat aperiam
+                perfe..
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1666868224966-455d7e9d5926?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdod2F5JTIwcm9hZCUyMGJyYXNpbHxlbnwxfHx8fDE3NjQwMzg2Njd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="News"
+              />
+              <div class="news-overlay"></div>
+              <span class="news-category">Capacitação</span>
+            </div>
+            <div class="news-content">
+              <p class="news-date">📅 10 Nov 2025</p>
+              <h3 class="news-title">
+                Inscrições abertas para curso de primeiros socorros
+              </h3>
+              <p class="news-description">
+                Curso gratuito para associados, com certificação reconhecida
+                pelo DETRAN-AC.
+              </p>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1728536946752-1ef6aabf69ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXhpJTIwc3RyZWV0JTIwY2l0eXxlbnwxfHx8fDE3NjQwMzg2NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="News"
+              />
+              <div class="news-overlay"></div>
+              <span class="news-category">Comunicado</span>
+            </div>
+            <div class="news-content">
+              <p class="news-date">📅 5 Nov 2025</p>
+              <h3 class="news-title">
+                Nova parceria: Desconto em cursos de direção defensiva
+              </h3>
+              <p class="news-description">
+                Associados terão 40% de desconto em cursos certificados pela
+                Auto Escola Parceira.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <p>
+            © 2025 STB-AC - Sindicato dos Taxistas de Brasileia. Todos os
+            direitos reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+      <section class="container">
+        <div class="section-header">
+          <h1 class="section-title">Contato e Localização</h1>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Entre em contato conosco. Estamos prontos para atendê-lo!
+          </p>
+        </div>
+
+        <div class="contact-grid" style="margin-bottom: 3rem">
+          <div class="contact-info">
+            <div class="contact-card blue">
+              <div class="contact-icon blue">📞</div>
+              <h3 class="contact-title">Telefone</h3>
+              <p class="contact-text">(68) 992097777</p>
+              <p class="contact-text">(68) 999691679</p>
+            </div>
+
+            <div class="contact-card green">
+              <div class="contact-icon green">✉️</div>
+              <h3 class="contact-title">E-mail</h3>
+              <p class="contact-text">stb.w2025@gmail.com</p>
+            </div>
+
+            <div class="contact-card yellow">
+              <div class="contact-icon yellow">🕐</div>
+              <h3 class="contact-title">Horário</h3>
+              <p class="contact-text">Segunda a Sexta</p>
+              <p class="contact-text">8h às 18h</p>
+            </div>
+          </div>
+
+          <div class="form-container">
+            <h2 class="form-title">Envie sua Mensagem</h2>
+
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Nome Completo</label>
+                  <input
+                    type="text"
+                    class="form-input"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Telefone</label>
+                  <input
+                    type="tel"
+                    class="form-input"
+                    placeholder="(68) 99999-9999"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  class="form-input"
+                  placeholder="seu@email.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Assunto</label>
+                <select class="form-select" required>
+                  <option value="">Selecione um assunto</option>
+                  <option value="associacao">Quero me associar</option>
+                  <option value="informacao">Informações gerais</option>
+                  <option value="outro">Outro assunto</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Mensagem</label>
+                <textarea
+                  class="form-textarea"
+                  rows="6"
+                  placeholder="Digite sua mensagem..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <span>✉️</span>
+                Enviar Mensagem
+              </button>
+            </form>
+
+            <div id="successMessage" class="success-message">
+              <div class="success-icon">✅</div>
+              <h3 class="success-title">Mensagem Enviada!</h3>
+              <p class="success-text">
+                Obrigado pelo contato. Responderemos em breve.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+          <div class="map-header">
+            <div class="map-header-content">
+              <span class="map-icon">📍</span>
+              <h2 class="map-title">Nossa Localização</h2>
+            </div>
+            <p class="map-address">
+              Rua Governador Joaquim Falcão Macedo, nº 562 - Bairro Alberto
+              Castro, Brasiléia - AC
+            </p>
+          </div>
+          <div class="map-frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.234!2d-68.748!3d-10.998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU5JzUyLjgiUyA2OMKwNDQnNTIuOCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="container">
+        <div class="cta-container">
+          <div class="cta-card">
+            <div class="cta-icon-wrapper">
+              <div class="cta-icon">👥</div>
+            </div>
+            <h2 class="cta-title">
+              Faça Parte da Maior União de Taxistas de Brasileia
+            </h2>
+            <p class="cta-description">
+              Mais de 200 taxistas já são associados. Tenha acesso a benefícios
+              exclusivos.
+            </p>
+            <div class="cta-buttons">
+              <button class="btn-primary" onclick="navigateTo('services')">
+                Ver Benefícios
+              </button>
+              <button
+                class="btn-secondary"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+              >
+                Entre em Contato
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <p>
+            © 2025 STB-AC - Sindicato dos Taxistas de Brasileia. Todos os
+            direitos reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/js.js"></script>
+  </body>
+</html>
