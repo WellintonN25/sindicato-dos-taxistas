@@ -1,64 +1,62 @@
-      // Navigation
-      function navigateTo(page) {
-        // Hide all pages
-        const pages = document.querySelectorAll(".page");
-        pages.forEach((p) => p.classList.remove("active"));
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. SPA Navigation Logic ---
+    const navigateTo = (targetId) => {
+        // Esconde todas as páginas
+        document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+        // Mostra a página alvo
+        const targetPage = document.getElementById(targetId);
+        if (targetPage) targetPage.classList.add('active');
 
-        // Show selected page
-        document.getElementById(page).classList.add("active");
-
-        // Update nav links
-        const navLinks = document.querySelectorAll(".nav-link");
-        navLinks.forEach((link) => link.classList.remove("active"));
-
-        const linkMap = {
-          home: 0,
-          services: 1,
-          contact: 2,
-        };
-        navLinks[linkMap[page]].classList.add("active");
-
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      // Form submission
-      function handleSubmit(event) {
-        event.preventDefault();
-
-        const form = document.getElementById("contactForm");
-        const successMessage = document.getElementById("successMessage");
-
-        // Hide form and show success message
-        form.style.display = "none";
-        successMessage.classList.add("active");
-
-        // Reset after 3 seconds
-        setTimeout(() => {
-          form.style.display = "block";
-          form.reset();
-          successMessage.classList.remove("active");
-        }, 3000);
-      }
-
-      // Smooth scroll animation on load
-      window.addEventListener("load", () => {
-        document.body.style.opacity = "1";
-      });
-
-      // Add hover effects to cards
-      document.addEventListener("DOMContentLoaded", () => {
-        const cards = document.querySelectorAll(
-          ".glass-card, .service-card, .news-card, .value-card"
-        );
-
-        cards.forEach((card) => {
-          card.addEventListener("mouseenter", function () {
-            this.style.transform = "translateY(-8px) scale(1.02)";
-          });
-
-          card.addEventListener("mouseleave", function () {
-            this.style.transform = "translateY(0) scale(1)";
-          });
+        // Atualiza menu ativo
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.toggle('active', link.getAttribute('data-target') === targetId);
         });
-      });
+
+        // Fecha menu mobile se estiver aberto
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Event Listener Global para cliques (Event Delegation)
+    document.body.addEventListener('click', (e) => {
+        // Verifica se clicou em algo que tem "data-target"
+        const targetLink = e.target.closest('[data-target]');
+        if (targetLink) {
+            e.preventDefault();
+            const pageId = targetLink.getAttribute('data-target');
+            navigateTo(pageId);
+        }
+    });
+
+    // --- 2. Mobile Menu Toggle ---
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // --- 3. Form Handling ---
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const successMsg = document.getElementById('successMessage');
+            contactForm.style.display = 'none';
+            successMsg.classList.add('active');
+
+            // Reset após 3 segundos
+            setTimeout(() => {
+                contactForm.reset();
+                contactForm.style.display = 'block';
+                successMsg.classList.remove('active');
+            }, 3000);
+        });
+    }
+});
